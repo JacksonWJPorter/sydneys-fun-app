@@ -33,14 +33,12 @@ export async function POST(request) {
       .map((s) => `- ${s}: ${lessonDetails[s] || "No specific notes provided."}`)
       .join("\n");
 
-    const durationStr = duration === "full" ? "full day (8:00 AM - 3:00 PM)" : "half day (8:00 AM - 12:00 PM)";
     const gradeStr = gradeLevel.map((g) => `Grade ${g}`).join(", ");
 
     const prompt = `You are creating a detailed substitute teacher plan. Generate a complete, realistic plan in JSON format.
 
 TEACHER: ${teacherName}
 GRADES: ${gradeStr}
-DURATION: ${durationStr}
 DIFFICULTY: ${difficultyDescription}
 TONE: ${toneDescription}
 
@@ -50,6 +48,20 @@ ${subjectDetails}
 SPECIAL INSTRUCTIONS: ${specialInstructions || "None"}
 INCLUDE EMERGENCY PROCEDURES: ${emergencyProcedures ? "Yes" : "No"}
 
+The schedule MUST use these EXACT time blocks — do NOT change or add any times:
+1. 9:05 AM - 9:55 AM — First Period
+2. 9:55 AM - 10:45 AM — Second Period
+3. 10:45 AM - 11:05 AM — Recess
+4. 11:05 AM - 11:25 AM — Lunch
+5. 11:25 AM - 12:15 PM — Third Period
+6. 12:15 PM - 1:05 PM — Fourth Period
+7. 1:05 PM - 1:25 PM — Recess
+8. 1:25 PM - 1:45 PM — Lunch
+9. 1:45 PM - 2:35 PM — Fifth Period
+10. 2:35 PM - 3:20 PM — Sixth Period
+
+Assign the teacher's subjects to the numbered period slots. Recess and Lunch blocks should have brief, helpful notes for the sub.
+
 Generate a JSON object with EXACTLY this structure (no markdown, no code fences, just raw JSON):
 
 {
@@ -57,12 +69,12 @@ Generate a JSON object with EXACTLY this structure (no markdown, no code fences,
   "date": "today's date formatted like 'Monday, February 7, 2026'",
   "grades": ${JSON.stringify(gradeLevel.map((g) => `Grade ${g}`))},
   "subjects": ${JSON.stringify(subjects)},
-  "duration": "${duration}",
+  "duration": "full",
   "tone": "${tone}",
   "schedule": [
     {
-      "time": "8:00 AM - 8:15 AM",
-      "subject": "Morning Routine",
+      "time": "9:05 AM - 9:55 AM",
+      "subject": "First Period — Subject Name",
       "activity": "description of what happens",
       "materials": "list of materials needed",
       "notes": "helpful notes for the sub"
@@ -74,8 +86,7 @@ Generate a JSON object with EXACTLY this structure (no markdown, no code fences,
 }
 
 IMPORTANT RULES:
-- The schedule should have 8-15 time blocks filling the entire ${durationStr}
-- Include transitions, brain breaks, recess (for elementary), and lunch (for full day)
+- The schedule MUST have exactly 10 entries matching the 10 time blocks above — no more, no less
 - Each schedule item MUST have time, subject, activity, materials (as a string), and notes
 - The tone of ALL text should be ${toneDescription}
 - Fun facts should be interesting, age-appropriate facts for ${gradeStr} students
