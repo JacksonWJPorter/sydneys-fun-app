@@ -374,7 +374,7 @@ export default function Hero({ onGetStarted }) {
           />
           <StatCard
             icon={Star}
-            value="4.9\u2605"
+            value="4.9★"
             label="Rating"
             color="#00d2a0"
             delay={1.9}
