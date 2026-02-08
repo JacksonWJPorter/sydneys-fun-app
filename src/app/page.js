@@ -65,7 +65,36 @@ export default function Home() {
 
   // ---- Handle selecting a pre-made template ----
   const handleTemplateSelect = useCallback(async (templateData) => {
-    setFormData(templateData);
+    // Build lessonDetails from the template's periods array
+    const lessonDetails = {};
+    if (templateData.periods) {
+      for (const period of templateData.periods) {
+        const subj = period.subject;
+        if (subj && subj !== "Break") {
+          lessonDetails[subj] = lessonDetails[subj]
+            ? lessonDetails[subj] + " | " + period.notes
+            : period.notes;
+        }
+      }
+    }
+
+    // Map template tone to API tone/difficulty
+    const toneLower = (templateData.tone || "friendly").toLowerCase();
+    const toneMap = { fun: "fun", normal: "friendly", professional: "professional", friendly: "friendly", challenge: "friendly" };
+    const difficultyMap = { fun: "simple", normal: "business", professional: "business", friendly: "business", challenge: "challenge" };
+
+    const apiData = {
+      teacherName: templateData.teacherName || "Teacher",
+      gradeLevel: [templateData.gradeLevel || "K-2"],
+      subjects: templateData.subjects || [],
+      lessonDetails,
+      difficulty: difficultyMap[toneLower] || "business",
+      specialInstructions: templateData.specialNotes || "",
+      emergencyProcedures: false,
+      tone: toneMap[toneLower] || "friendly",
+    };
+
+    setFormData(apiData);
     setIsGenerating(true);
     setView("result");
 
@@ -73,7 +102,7 @@ export default function Home() {
       const res = await fetch("/api/generate-plan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(templateData),
+        body: JSON.stringify(apiData),
       });
       if (!res.ok) throw new Error("Failed to generate plan");
       const generatedPlan = await res.json();

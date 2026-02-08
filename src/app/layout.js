@@ -22,10 +22,20 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata = {
   title: "SubPlanr — AI Substitute Teacher Plans",
   description:
     "Generate complete, classroom-ready substitute teacher plans in one click. Powered by AI, designed by teachers, built for peace of mind.",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+  },
   keywords: [
     "substitute teacher",
     "sub plans",
