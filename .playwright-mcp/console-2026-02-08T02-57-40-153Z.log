@@ -1,0 +1,316 @@
+[     335ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[     364ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="page.js">
+                  <SegmentTrieNode>
+                  <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+                    <Home params={Promise} searchParams={Promise}>
+                      <main className="min-h-scre...">
+                        <ParticleField count={40}>
+                          <div className={"absolute..."} aria-hidden={true}>
+                            <style>
+                            <span>
+                            <span>
+                            <span
+                              className="absolute rounded-full"
+                              style={{
++                               left: "74.78668720777932%"
+-                               left: "74.7867%"
++                               top: "80.64965067351295%"
+-                               top: "80.6497%"
++                               width: 2.124946113093756
+-                               width: "2.12495px"
++                               height: 2.124946113093756
+-                               height: "2.12495px"
++                               backgroundColor: "#00d2a0"
++                               --pf-o: 0.1910925717871578
+-                               --pf-o: "0.1910925717871578"
++                               --pf-dx: "-7.854323761712294px"
+-                               --pf-dx: "-7.854323761712294px"
++                               --pf-dy: "-55vh"
+-                               --pf-dy: "-55vh"
++                               animation: "pf-rise 8.91576531206374s 0.27849755524962605s linear infinite"
++                               willChange: "transform, opacity"
+-                               background-color: "rgb(0, 210, 160)"
+-                               animation-duration: "8.91577s"
+-                               animation-timing-function: "linear"
+-                               animation-delay: "0.278498s"
+-                               animation-iteration-count: "infinite"
+-                               animation-direction: "normal"
+-                               animation-fill-mode: "none"
+-                               animation-play-state: "running"
+-                               animation-name: "pf-rise"
+-                               animation-timeline: "auto"
+-                               animation-range-start: "normal"
+-                               animation-range-end: "normal"
+-                               will-change: "transform, opacity"
+                              }}
+                            >
+                            <span>
+                            <span>
+                            <span>
+                            <span
+                              className="absolute rounded-full"
+                              style={{
++                               left: "34.68685554762487%"
+-                               left: "34.6869%"
++                               top: "98.76785246306099%"
+-                               top: "98.7679%"
++                               width: 3.047412760613952
+-                               width: "3.04741px"
++                               height: 3.047412760613952
+-                               height: "3.04741px"
++                               backgroundColor: "#f5c518"
++                               --pf-o: 0.1857871438827715
+-                               --pf-o: "0.18578714388495426"
++                               --pf-dx: "-8.561714148963802px"
+-                               --pf-dx: "-8.561714148672763px"
++                               --pf-dy: "-55vh"
+-                               --pf-dy: "-55vh"
++                               animation: "pf-rise 8.355163475804147s 2.187826210393221s linear infinite"
++                               willChange: "transform, opacity"
+-                               background-color: "rgb(245, 197, 24)"
+-                               animation-duration: "8.35516s"
+-                               animation-timing-function: "linear"
+-                               animation-delay: "2.18783s"
+-                               animation-iteration-count: "infinite"
+-                               animation-direction: "normal"
+-                               animation-fill-mode: "none"
+-                               animation-play-state: "running"
+-                               animation-name: "pf-rise"
+-                               animation-timeline: "auto"
+-                               animation-range-start: "normal"
+-                               animation-range-end: "normal"
+-                               will-change: "transform, opacity"
+                              }}
+                            >
+                            <span>
+                            <span
+                              className="absolute rounded-full"
+                              style={{
++                               left: "68.93185017252108%"
+-                               left: "68.9319%"
++                               top: "65.69732839925564%"
+-                               top: "65.6973%"
++                               width: 4.692226986066089
+-                               width: "4.69223px"
++                               height: 4.692226986066089
+-                               height: "4.69223px"
++                               backgroundColor: "#7b2ff7"
++                               --pf-o: 0.38901049342021
+-                               --pf-o: "0.38901049342021"
++                               --pf-dx: "18.534732456027996px"
+-                               --pf-dx: "18.534732456027996px"
++                               --pf-dy: "-55vh"
+-                               --pf-dy: "-55vh"
++                               animation: "pf-rise 13.609413568279706s 9.159907618264153s linear infinite"
++                               willChange: "transform, opacity"
+-                               background-color: "rgb(123, 47, 247)"
+-                               animation-duration: "13.6094s"
+-                               animation-timing-function: "linear"
+-                               animation-delay: "9.15991s"
+-                               animation-iteration-count: "infinite"
+-                               animation-direction: "normal"
+-                               animation-fill-mode: "none"
+-                               animation-play-state: "running"
+-                               animation-name: "pf-rise"
+-                               animation-timeline: "auto"
+-                               animation-range-start: "normal"
+-                               animation-range-end: "normal"
+-                               will-change: "transform, opacity"
+                              }}
+                            >
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span
+                              className="absolute rounded-full"
+                              style={{
++                               left: "51.28114742838079%"
+-                               left: "51.2811%"
++                               top: "33.48254661395913%"
+-                               top: "33.4825%"
++                               width: 2.383392709933105
+-                               width: "2.38339px"
++                               height: 2.383392709933105
+-                               height: "2.38339px"
++                               backgroundColor: "#e94560"
++                               --pf-o: 0.3117994795749837
+-                               --pf-o: "0.3117994795749837"
++                               --pf-dx: "8.239930609997828px"
+-                               --pf-dx: "8.239930609997828px"
++                               --pf-dy: "-55vh"
+-                               --pf-dy: "-55vh"
++                               animation: "pf-rise 14.586342076559959s 1.398074304185899s linear infinite"
++                               willChange: "transform, opacity"
+-                               background-color: "rgb(233, 69, 96)"
+-                               animation-duration: "14.5863s"
+-                               animation-timing-function: "linear"
+-                               animation-delay: "1.39807s"
+-                               animation-iteration-count: "infinite"
+-                               animation-direction: "normal"
+-                               animation-fill-mode: "none"
+-                               animation-play-state: "running"
+-                               animation-name: "pf-rise"
+-                               animation-timeline: "auto"
+-                               animation-range-start: "normal"
+-                               animation-range-end: "normal"
+-                               will-change: "transform, opacity"
+                              }}
+                            >
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span
+                              className="absolute rounded-full"
+                              style={{
++                               left: "70.400819515271%"
+-                               left: "70.4008%"
++                               top: "89.99359383306%"
+-                               top: "89.9936%"
++                               width: 3.6131983154919
+-                               width: "3.6132px"
++                               height: 3.6131983154919
+-                               height: "3.6132px"
++                               backgroundColor: "#e94560"
++                               --pf-o: 0.25208452783226676
+-                               --pf-o: "0.25208452783226676"
++                               --pf-dx: "0.2779370443022344px"
+-                               --pf-dx: "0.2779370443022344px"
++                               --pf-dy: "-55vh"
+-                               --pf-dy: "-55vh"
++                               animation: "pf-rise 14.1814960739257s 5.719391394402983s linear infinite"
++                               willChange: "transform, opacity"
+-                               background-color: "rgb(233, 69, 96)"
+-                               animation-duration: "14.1815s"
+-                               animation-timing-function: "linear"
+-                               animation-delay: "5.71939s"
+-                               animation-iteration-count: "infinite"
+-                               animation-direction: "normal"
+-                               animation-fill-mode: "none"
+-                               animation-play-state: "running"
+-                               animation-name: "pf-rise"
+-                               animation-timeline: "auto"
+-                               animation-range-start: "normal"
+-                               animation-range-end: "normal"
+-                               will-change: "transform, opacity"
+                              }}
+                            >
+                            <span>
+                            <span>
+                            <span
+                              className="absolute rounded-full"
+                              style={{
++                               left: "96.64115558916819%"
+-                               left: "96.6412%"
++                               top: "20.786750311526703%"
+-                               top: "20.7868%"
++                               width: 3.5472211602318566
+-                               width: "3.54722px"
++                               height: 3.5472211602318566
+-                               height: "3.54722px"
++                               backgroundColor: "#e94560"
++                               --pf-o: 0.34218688666005614
+-                               --pf-o: "0.34218688666005614"
++                               --pf-dx: "12.291584888007492px"
+-                               --pf-dx: "12.291584888007492px"
++                               --pf-dy: "-55vh"
+-                               --pf-dy: "-55vh"
++                               animation: "pf-rise 9.198985697781609s 3.558216331069479s linear infinite"
++                               willChange: "transform, opacity"
+-                               background-color: "rgb(233, 69, 96)"
+-                               animation-duration: "9.19899s"
+-                               animation-timing-function: "linear"
+-                               animation-delay: "3.55822s"
+-                               animation-iteration-count: "infinite"
+-                               animation-direction: "normal"
+-                               animation-fill-mode: "none"
+-                               animation-play-state: "running"
+-                               animation-name: "pf-rise"
+-                               animation-timeline: "auto"
+-                               animation-range-start: "normal"
+-                               animation-range-end: "normal"
+-                               will-change: "transform, opacity"
+                              }}
+                            >
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span>
+                            <span
+                              className="absolute rounded-full"
+                              style={{
++                               left: "33.061443631959264%"
+-                               left: "33.0614%"
++                               top: "64.27959349603043%"
+-                               top: "64.2796%"
++                               width: 3.920259594451636
+-                               width: "3.92026px"
++                               height: 3.920259594451636
+-                               height: "3.92026px"
++                               backgroundColor: "#00d2a0"
++                               --pf-o: 0.18960161181457807
+-                               --pf-o: "0.18960161181676086"
++                               --pf-dx: "-8.053118424722925px"
+-                               --pf-dx: "-8.053118424431887px"
++                               --pf-dy: "-55vh"
+-                               --pf-dy: "-55vh"
++                               animation: "pf-rise 7.450558111064311s 3.5767514241976754s linear infinite"
++                               willChange: "transform, opacity"
+-                               background-color: "rgb(0, 210, 160)"
+-                               animation-duration: "7.45056s"
+-                               animation-timing-function: "linear"
+-                               animation-delay: "3.57675s"
+-                               animation-iteration-count: "infinite"
+-                               animation-direction: "normal"
+-                               animation-fill-mode: "none"
+-                               animation-play-state: "running"
+-                               animation-name: "pf-rise"
+-                               animation-timeline: "auto"
+-                               animation-range-start: "normal"
+-                               animation-range-end: "normal"
+-                               will-change: "transform, opacity"
+                              }}
+                            >
+                            ...
+                        ...
+                ...
+              ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  110725ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/generate-plan:0
+[  110726ms] [ERROR] Plan generation failed: Error: Failed to generate plan
+    at Home.useCallback[handleGenerate] (http://localhost:3000/_next/static/chunks/src_15858ed6._.js:10395:36) @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[  314229ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=JHJkj3t4LvG2eSViEyjfl' failed:  @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[  315234ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=JHJkj3t4LvG2eSViEyjfl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[  316235ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=JHJkj3t4LvG2eSViEyjfl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[  317239ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=JHJkj3t4LvG2eSViEyjfl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[  318241ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=JHJkj3t4LvG2eSViEyjfl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
+[  319243ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr?id=JHJkj3t4LvG2eSViEyjfl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_17643121._.js:10878
